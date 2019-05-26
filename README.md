@@ -1,5 +1,5 @@
-# HTML-Calculator
-.
+# HTML-Calculator<br>
+.\n
 My Calculator Pro - using html and css
 .
 This Calculator developed by : Farid domat
