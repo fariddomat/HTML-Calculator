@@ -1,0 +1,113 @@
+<html>
+<head>
+<title> My Calculator Pro</title>
+<style>
+body{
+text-align:center;
+color:blue
+}
+input{
+    
+    width: 100%;
+    height: 100%;
+    background-color: ghostwhite;
+    border-radius: 5px
+}
+td{
+    padding: 0;
+}
+table{
+    border-radius: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<h2>My Calculator Pro</h2>
+<center>
+<FORM NAME="Calculate">
+<table border=2 bgcolor=#008080 bordercolor=black>
+
+<tr height=40 >
+<td colspan="4" width=80><INPUT TYPE="text"   NAME="Input" Size="50"> </td>
+</tr>
+
+<tr height=40 >
+<td colspan="2" width=80><input TYPE="button" VALUE="Back Space  " ONCLICK="deleteNumber(document.Calculate.Input)"></td>
+<td width=80> <input TYPE ="button" VALUE="  CE  " ONCLICK="deleteNumber(document.Calculate.Input)"></td>
+<td width=80> <input TYPE = "reset"  NAME = "reset"  VALUE = "     c    " ></td>
+<td width=80 bgcolor=#32cd32> <input TYPE = "button"  NAME = "information"  VALUE = "   info  "  ONCLICK="info()"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="seven" VALUE="    7    " OnClick="Calculate.Input.value += '7'"></td>
+<td width=80><INPUT TYPE="button" NAME="eight" VALUE="    8    " OnCLick="Calculate.Input.value += '8'"></td>
+<td width=80><INPUT TYPE="button" NAME="nine"  VALUE="    9    " OnClick="Calculate.Input.value += '9'"></td>
+<td width=80><INPUT TYPE="button" NAME="div"   VALUE="     /     " OnClick="Calculate.Input.value += ' / '"></td>
+<td width=80><INPUT TYPE="button" NAME="sqrt" VALUE="   sqrt  " OnClick="Calculate.Input.value = Math.sqrt(Calculate.Input.value)"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="four"  VALUE="    4    " OnClick="Calculate.Input.value += '4'"></td>
+<td width=80><INPUT TYPE="button" NAME="five"  VALUE="    5    " OnCLick="Calculate.Input.value += '5'"> </td>
+<td width=80><INPUT TYPE="button" NAME="six"   VALUE="    6    " OnClick="Calculate.Input.value += '6'"></td>
+<td width=80><INPUT TYPE="button" NAME="mult" VALUE="     x    " OnClick="Calculate.Input.value += ' * '"></td>
+<td width=80><INPUT TYPE="button" NAME="abs" VALUE="   abs  " OnClick="Calculate.Input.value = Math.abs(Calculate.Input.value)"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="one"   VALUE="    1    " OnClick="Calculate.Input.value += '1'"></td>
+<td width=80><INPUT TYPE="button" NAME="two"   VALUE="    2    " OnCLick="Calculate.Input.value += '2'"> </td>
+<td width=80><INPUT TYPE="button" NAME="three" VALUE="    3    " OnClick="Calculate.Input.value += '3'"></td>
+<td width=80><INPUT TYPE="button" NAME="dash" VALUE="      -    " OnClick="Calculate.Input.value += ' - '"></td>
+<td width=80><INPUT TYPE="button" NAME="flip" VALUE="   1/x   " OnClick="Calculate.Input.value = 1/eval(Calculate.Input.value)"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="zero"  VALUE="    0    " OnClick="Calculate.Input.value += '0'"></td>
+<td width=80><INPUT TYPE="button" NAME="point"  VALUE="     .    " OnClick="Calculate.Input.value += '.'"></td>
+<td width=80><INPUT TYPE="button" NAME="DoIt"  VALUE="    =    " OnClick="Calculate.Input.value = eval(Calculate.Input.value)"></td>
+<td width=80><INPUT TYPE="button" NAME="plus"  VALUE="     +    " OnClick="Calculate.Input.value += ' + '"></td>
+<td width=80><INPUT TYPE="button" NAME="rnd" VALUE="   rnd   " OnClick="Calculate.Input.value = Math.random();"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="sin" VALUE="  sin   " OnClick="Calculate.Input.value = Math.sin(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="cos" VALUE="  cos " OnClick="Calculate.Input.value = Math.cos(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="tan" VALUE="  tan  " OnClick="Calculate.Input.value = Math.tan(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="aaaa1" VALUE="      (    " OnClick="Calculate.Input.value += ' ( '"></td>
+<td width=80><INPUT TYPE="button" NAME="aaaa2" VALUE="      )    " OnClick="Calculate.Input.value += ' ) '"></td>
+
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="asin" VALUE="  asin  " OnClick="Calculate.Input.value = Math.asin(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="acos" VALUE="  acos" OnClick="Calculate.Input.value = Math.acos(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="atan" VALUE="  atan " OnClick="Calculate.Input.value = Math.atan(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="log" VALUE="   log   " OnClick="Calculate.Input.value = Math.log(Calculate.Input.value);"></td>
+<td width=80><INPUT TYPE="button" NAME="ln" VALUE="    ln    " OnClick="Calculate.Input.value = Math.LN(Calculate.Input.value);"></td>
+</tr>
+
+<tr height=40>
+<td width=80><INPUT TYPE="button" NAME="square"  VALUE="  x^2  "OnClick="Calculate.Input.value = eval(Calculate.Input.value)* eval(Calculate.Input.value)"></td>
+<td width=80><INPUT TYPE="button" NAME="booox "  VALUE="  x^3  "OnClick="Calculate.Input.value = eval(Calculate.Input.value)*eval(Calculate.Input.value)* eval(Calculate.Input.value)"></td>
+<td width=80><INPUT TYPE="button" NAME="pow "  VALUE="  x^x  "OnClick="Calculate.Input.value = Math.pow(Calculate.Input.value,Calculate.Input.value2)"></td>
+<td width=80><INPUT TYPE="button" NAME="E"  VALUE="    e     " OnClick="Calculate.Input.value =Math.E"></td>
+<td width=80><INPUT TYPE="button" NAME="PI"  VALUE="    pi    " OnClick="Calculate.Input.value =Math.PI"></td>
+</tr>
+
+</table>
+
+</center>
+<script>
+function deleteNumber(input){
+input.value = input.value.substring(0,input.value.length - 1)
+}
+function info(){
+window.alert("\t\t\tMy Calculator Pro \n\nThis Calculator is developing by : Farid domat\nVersion number : v 1 . 0\nDate of release : 22-11-2014");
+
+}
+</script>
+</body>
+</html>
